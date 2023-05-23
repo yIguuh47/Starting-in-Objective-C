@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property int employeeNumber;
 
 -(void) someMethod ;
+-(NSString *) thisNamePerson:(NSString *)name;
+-(int) incrementSome:(int)number1 numberTwo:(int)number2;
+-(double) incrementDouble:(double)num1 secondIncrement:(double)num2;
 
 @end
 
