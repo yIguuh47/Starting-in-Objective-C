@@ -9,7 +9,4 @@
 
 @implementation ArrayTest
 
-//+ (id)title:(NSString *)title;
-//+ (id)subtitle:(NSString *)subtitle;
-
 @end

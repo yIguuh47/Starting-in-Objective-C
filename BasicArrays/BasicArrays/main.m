@@ -8,49 +8,32 @@
 #import <Foundation/Foundation.h>
 #import "ArrayTest.h"
 
-
-//@interface TypeArray: NSObject
-//
-//@property NSString *title;
-//@property NSString *subtitle;
-//
-//@end
-//
-//@implementation TypeArray
-//
-//+ (id)title:(NSString *)title;
-//+ (id)subtitle:(NSString *)subtitle;
-//
-//@end
-
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         //initial a object of the class
-        ArrayTest *arrayTest = [[ArrayTest alloc] init];
-        ArrayTest *arraTst = [ArrayTest new];
-        arraTst.title = @"Heade";
-
-        
+        ArrayTest *firstArray = [[ArrayTest alloc] init];
+        ArrayTest *secondArray = [ArrayTest new];
+        secondArray.title = @"Heade";
+        secondArray.subtitle = @"Body";
         
         int multipleValue[5] = { 10, 100, 1000, 10000, 100000 };
 
         NSMutableArray<ArrayTest *> *arrayTes = [[NSMutableArray<ArrayTest *> alloc] init];
-        [arrayTes addObject:arraTst];
+        [arrayTes addObject:secondArray];
         NSLog(@"%@", arrayTes[0].title);
         [arrayTes addObject: [[ArrayTest alloc] init].title = @"Body" ];
         
-        NSString *a1 = @"a";
-        NSString *a2 = @"b";
+        NSString *a1 = @"Volvo";
+        NSString *a2 = @"Scania";
         
-//        NSMutableArray<NSString *> *testA;
-        NSMutableArray<NSString *> *testA = [[NSMutableArray<NSString *> alloc] init];
+        NSMutableArray<NSString *> *arrPeoples = [[NSMutableArray<NSString *> alloc] init];
         
-        [testA addObject:@"Jooj"];
-        [testA addObject:@"AA"];
-        [testA addObject:@"And"];
+        [arrPeoples addObject:@"Igor"];
+        [arrPeoples addObject:@"Douglas"];
+        [arrPeoples addObject:@"Estela"];
         
-        NSLog(@"Intens Elements: %@",testA[0]);
+        NSLog(@"Intens Elements: %@",arrPeoples[0]);
         
         NSMutableArray *trucksArray = [NSMutableArray arrayWithObjects:a1, a2, nil];
 
@@ -66,12 +49,13 @@ int main(int argc, const char * argv[]) {
         
         NSString *a = @"a";
         
-//        NSMutableArray *array = [NSMutableArray arrayWithObjects:a,nil];
+        NSMutableArray *arrayInit = [NSMutableArray arrayWithObjects:a,nil];
         //ou
-        NSMutableArray *array = [[NSMutableArray alloc]init]; //alloc
+        NSMutableArray *arrayInitialization = [[NSMutableArray alloc]init]; //alloc
 
-        [array addObject:a];
-        NSLog(@"%@", arrayTes[1].title);
+        [arrayInitialization addObject:a];
+        NSLog(@"%@", arrayTes[0].title);
+        
         
     }
     return 0;
